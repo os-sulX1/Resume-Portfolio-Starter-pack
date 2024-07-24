@@ -1,6 +1,6 @@
 import React from "react";
 
-const Testimonials = ({ data }) => {
+var Testimonials = ({ data }) => {
   if (data) {
     var testimonials = data.testimonials.map(function (testimonials) {
       return (

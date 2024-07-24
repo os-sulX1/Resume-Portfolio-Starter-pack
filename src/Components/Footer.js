@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = ({ data }) => {
+var Footer = ({ data }) => {
   if (data) {
     var networks = data.social.map(function (network) {
       return (
@@ -22,8 +22,8 @@ const Footer = ({ data }) => {
           <ul className="copyright">
             <li>
               Made by{" "}
-              <a title="PAPA" href="http://www.papareact.com/">
-                PAPA
+              <a title="Sultan Saleh" href="https://www.linkedin.com/in/sultano-saleh">
+                Sultan Saleh
               </a>
             </li>
           </ul>

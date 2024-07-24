@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const Contact = ({ data }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+var Contact = ({ data }) => {
+  var [name, setName] = useState("");
+  var [email, setEmail] = useState("");
+  var [subject, setSubject] = useState("");
+  var [message, setMessage] = useState("");
 
   if (data) {
     var contactName = data.name;
@@ -17,7 +17,7 @@ const Contact = ({ data }) => {
     var contactMessage = data.contactmessage;
   }
 
-  const submitForm = () => {
+  var submitForm = () => {
     window.open(
       `mailto:${contactEmail}?subject=${encodeURIComponent(
         subject

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Resume = ({ data }) => {
+var Resume = ({ data }) => {
   if (data) {
     var skillmessage = data.skillmessage;
     var education = data.education.map(function (education) {

@@ -6,9 +6,41 @@
 // cached resources are updated in the background.
 
 // To learn more about the benefits of this model, read https://goo.gl/KwvDNy.
+
+// In production, we register a service worker to serve assets from local cache.
+
+// This lets the app load faster on subsequent visits in production, and gives
+// it offline capabilities. However, it also means that developers (and users)
+// will only see deployed updates on the "N+1" visit to a page, since previously
+// cached resources are updated in the background.
+
+// To learn more about the benefits of this model, read https://goo.gl/KwvDNy.
+
+{/*
+    
+     {
+        "name": "facebook",
+        "url": "https://www.facebook.com/sonny.sangha.3",
+        "className": "fa fa-facebook"
+      },
+     {
+        "name": "instagram",
+        "url": "https://www.instagram.com/ssssangha/",
+        "className": "fa fa-instagram"
+      },
+          {
+        "name": "youtube",
+        "url": "https://www.youtube.com/channel/UCqeTj_QAnNlmt7FwzNwHZnA",
+        "className": "fa fa-youtube"
+      }, 
+    
+    */// biome-ignore lint/complexity/noUselessLoneBlockStatements: <explanation>
+
+  
+    } 
 // This link also includes instructions on opting out of this behavior.
 
-const isLocalhost = Boolean(
+var isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
     window.location.hostname === '[::1]' ||
@@ -20,8 +52,8 @@ const isLocalhost = Boolean(
 
 export default function register() {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
-    // The URL constructor is available in all browsers that support SW.
-    const publicUrl = new URL(process.env.PUBLIC_URL, window.location);
+    // The URL varructor is available in all browsers that support SW.
+    var publicUrl = new URL(process.env.PUBLIC_URL, window.location);
     if (publicUrl.origin !== window.location.origin) {
       // Our service worker won't work if PUBLIC_URL is on a different origin
       // from what our page is served on. This might happen if a CDN is used to
@@ -30,7 +62,7 @@ export default function register() {
     }
 
     window.addEventListener('load', () => {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+      var swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
 
       if (isLocalhost) {
         // This is running on localhost. Lets check if a service worker still exists or not.
@@ -48,7 +80,7 @@ function registerValidSW(swUrl) {
     .register(swUrl)
     .then(registration => {
       registration.onupdatefound = () => {
-        const installingWorker = registration.installing;
+        var installingWorker = registration.installing;
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {

@@ -10,8 +10,8 @@ import Portfolio from "./Components/Portfolio";
 
 import "./App.css";
 
-const App = () => {
-  const [resumeData, setResumeData] = useState({});
+var App = () => {
+  var [resumeData, setResumeData] = useState({});
 
   useEffect(() => {
     fetch("/resumeData.json")
